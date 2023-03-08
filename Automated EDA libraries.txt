@@ -1,0 +1,37 @@
+1. Pandas Visual Analysis
+--pip install pandas_visual_analysis
+from pandas_visual_analysis import VisualAnalysis
+VisualAnalysis(df)
+
+2.Pandas AutoViz	
+--pip install autoviz
+from autoviz.AutoViz_Class import AutoViz_Class
+AV = AutoViz_Class()
+filename = "titanic.csv"
+sep = ","
+dft = AV.AutoViz(filename,sep=",",depVar="",dfte=None,header=0,verbose=0,lowess=False,chart_format="svg",max_rows_analyzed=150000,max_cols_analyzed=30,)
+
+3. DTALE
+-- pip intsall dtale
+import dtale
+dtale.show(df)
+
+4. Pandas Profiling
+-- pip intsall pandas-profiling
+from pandas_profiling import ProfileReport
+profile = ProfileReport(df,explorative = True)
+profile.to_file('output.html')
+
+5. Sweetviz
+-- pip install sweetviz
+import sweetviz as sv
+report = sv.analyze(df)
+report.show_html('output.html')
+
+6. DataPrep
+-- pip install dataprep
+from dataprep.eda import create_report
+create_report(df)
+
+7. Klib
+https://pypi.org/project/klib/
